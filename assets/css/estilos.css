@@ -8,6 +8,9 @@ body {
 .navbar-brand img {
   width: 30px;
 }
+.slide img {
+  height: 100vh;
+}
 #quienesSomos i {
   width: 100%;
   text-align: center;
@@ -17,14 +20,16 @@ body {
 #quienesSomos p {
   padding: 20px;
 }
-
+.card {
+  background: black;
+  color: white;
+}
 @media (max-width: 576px) {
   .navbar {
     position: fixed;
     background: #2ca3ad;
   }
-  #heroSection {
-    position: absolute;
-    top: 50px;
+  .slide img {
+    height: 60vh;
   }
 }
