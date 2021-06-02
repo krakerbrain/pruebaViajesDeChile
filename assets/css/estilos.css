@@ -1,0 +1,30 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: black;
+}
+
+.navbar-brand img {
+  width: 30px;
+}
+#quienesSomos i {
+  width: 100%;
+  text-align: center;
+  background: #2ca3ad;
+  font-size: 2em;
+}
+#quienesSomos p {
+  padding: 20px;
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    position: fixed;
+    background: #2ca3ad;
+  }
+  #heroSection {
+    position: absolute;
+    top: 50px;
+  }
+}
