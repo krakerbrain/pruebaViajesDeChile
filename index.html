@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="assets/css/estilos.css" />
   </head>
   <body>
+    <!-- Comenzamos usando un componente de boostrap navbar, los botones nos dirigen con efecto Scrollsmooth 
+      a diferentes secciones de la pagina-->
     <nav class="navbar navbar-expand-lg navbar-dark px-sm-5 bg-info fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets\img\viajes.svg" alt="logo" />Viajes Chile</a>
+        <a class="navbar-brand" href="#"><img class="px-1" src="assets\img\viajes.svg" alt="logo" />Viajes Chile</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -60,7 +62,8 @@
         </div>
       </div>
     </nav>
-    <header id="heroSection">
+    <!-- utilizamos el componente carrousel de boostrap wn el header. Se redujo el alto de las imagenes por medio de css -->
+    <header id="heroSection" class="active">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -83,46 +86,46 @@
         </a>
       </div>
     </header>
+    <!-- Esta es la seccion "¿Quienes somos?". Se utilizo el componente Card de Boostrap. 
+      La seccion desaparece en el modo mobil y se le aplico un "Modal" al dar click en cualquier parte de la tarjeta.
+    Se utilizaron 3 íconos de fontawesome  -->
 
     <section id="presentacion" class="presentacion pt-5 d-none d-sm-block">
       <div class="container">
         <h1 class="text-center text-light">¿Quienes Somos?</h1>
         <hr class="bg-info my-4" />
 
-        <div class="row">
+        <div class="row text-light">
           <div class="col-4 card">
             <i class="fal fa-plane card-img-top bg-info text-center py-2"></i>
-            <div class="card-body">
+            <div class="card-body" data-toggle="modal" data-target="#exampleModal">
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed labore eum corporis expedita facere, deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque. Ex
                 perspiciatis cum odio vel voluptas tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, dolore aliquam. Quos animi, ipsum distinctio possimus, magnam a laudantium
                 odio non debitis nisi deleniti assumenda quisquam impedit, fugit est quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed labore eum corporis expedita facere,
-                deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque. Ex perspiciatis cum odio vel voluptas tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
-                dolore aliquam. Quos animi, ipsum distinctio possimus, magnam a laudantium odio non debitis nisi deleniti assumenda quisquam impedit, fugit est quae.
+                deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque.
               </p>
             </div>
           </div>
           <div class="col-4 card">
-            <div class="card-body">
+            <div class="card-body" data-toggle="modal" data-target="#exampleModal">
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed labore eum corporis expedita facere, deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque. Ex
                 perspiciatis cum odio vel voluptas tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, dolore aliquam. Quos animi, ipsum distinctio possimus, magnam a laudantium
                 odio non debitis nisi deleniti assumenda quisquam impedit, fugit est quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed labore eum corporis expedita facere,
-                deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque. Ex perspiciatis cum odio vel voluptas tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
-                dolore aliquam. Quos animi, ipsum distinctio possimus, magnam a laudantium odio non debitis nisi deleniti assumenda quisquam impedit, fugit est quae.
+                deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque.
               </p>
               <i class="fas fa-mountain card-img-bottom bg-info text-center py-2"></i>
             </div>
           </div>
           <div class="col-4 card">
             <i class="fas fa-route card-img-top bg-info text-center py-2"></i>
-            <div class="card-body">
+            <div class="card-body" data-toggle="modal" data-target="#exampleModal">
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed labore eum corporis expedita facere, deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque. Ex
                 perspiciatis cum odio vel voluptas tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, dolore aliquam. Quos animi, ipsum distinctio possimus, magnam a laudantium
                 odio non debitis nisi deleniti assumenda quisquam impedit, fugit est quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed labore eum corporis expedita facere,
-                deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque. Ex perspiciatis cum odio vel voluptas tempore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
-                dolore aliquam. Quos animi, ipsum distinctio possimus, magnam a laudantium odio non debitis nisi deleniti assumenda quisquam impedit, fugit est quae.
+                deleniti, suscipit, voluptas reprehenderit temporibus earum sequi eaque.
               </p>
             </div>
           </div>
@@ -130,52 +133,71 @@
       </div>
     </section>
 
-    <div id="destacados" class="destacados pt-5">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Para saber más</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Contactenos al +56 9 4545 8122</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Los Destacados de la página también se crearon usando un componente Card de Boostrap.
+Se le aplicó un "ToolTips" a las imágenes que muestran descripción de la foto -->
+    <section id="destacados" class="destacados pt-5">
       <div class="container">
         <h1 class="text-center text-light">Destacados</h1>
         <hr class="bg-info my-4" />
 
-        <div class="row">
+        <div class="row text-light">
           <div class="col-12 col-sm-3">
-            <div class="card bg-info">
-              <img src="assets\img\card1.jpg" class="card-img-top" alt="..." />
+            <div class="card bg-info my-4">
+              <img src="assets\img\card1.jpg" class="card-img-top" alt="..." data-toggle="tooltip" data-placement="bottom" title="Los mejores paisajes" />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Hermosos paisajes</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-3">
-            <div class="card bg-info">
-              <img src="assets\img\card2.jpg" class="card-img-top" alt="..." />
+            <div class="card bg-info my-4">
+              <img src="assets\img\card2.jpg" class="card-img-top" alt="..." data-toggle="tooltip" data-placement="bottom" title="Caminatas - Excursiones" />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">La gran montaña</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-3">
-            <div class="card bg-info">
-              <img src="assets\img\card3.jpg" class="card-img-top" alt="..." />
+            <div class="card bg-info my-4">
+              <img src="assets\img\card3.jpg" class="card-img-top" alt="..." data-toggle="tooltip" data-placement="bottom" title="Visita el gran lago" />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">El gran lago</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-3">
-            <div class="card bg-info">
-              <img src="assets\img\card4.jpg" class="card-img-top" alt="..." />
+            <div class="card bg-info my-4">
+              <img src="assets\img\card4.jpg" class="card-img-top" alt="..." data-toggle="tooltip" data-placement="bottom" title="Bosques profundos" />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Bosque nativo</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </section>
+    <!-- En la seccion "Contacto", se creó desde cero un typeform usando la página solicitada -->
     <section id="contacto" class="p-5">
       <div class="container">
         <h1 class="text-center text-light">Contacto</h1>
@@ -205,29 +227,23 @@
         </script>
       </div>
     </section>
-    <footer class="footer pt-5">
-      <nav class="navbar navbar-expand-lg navbar-dark px-sm-5 bg-info fixed-bottom">
-        <div class="container">
-          <a class="navbar-brand mx-auto" href="#"> VIAJES CHILE </a>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <i class="fab fa-github-square"></i>
-              </li>
-              <li class="nav-item">
-                <i class="fab fa-linkedin"></i>
-              </li>
-              <li class="nav-item">
-                <i class="fab fa-twitter-square"></i>
-              </li>
-              <li class="nav-item">
-                <i class="fab fa-facebook-square"></i>
-              </li>
-            </ul>
-          </div>
+    <!-- El footer se creó usando el sistema de grillas, con columnas. Ademas se utilizaron 4 iconos de fotawesome -->
+    <footer id="footer" class="py-4 bg-info">
+      <div class="row container m-auto">
+        <div class="col-12 col-sm-6">
+          <a class="text-light" href="#heroSection">VIAJES CHILE</a>
         </div>
-      </nav>
+        <div class="col-12 col-sm-6 mt-4 mt-sm-0 text-right">
+          <i class="fab fa-github-square"></i>
+
+          <i class="fab fa-linkedin"></i>
+
+          <i class="fab fa-twitter-square"></i>
+
+          <i class="fab fa-facebook-square"></i>
+        </div>
+      </div>
     </footer>
 
     <!--jQuery 3.3.1-->

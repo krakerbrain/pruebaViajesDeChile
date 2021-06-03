@@ -1,31 +1,25 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
 body {
   background: black;
 }
-.navbar {
-  width: 100%;
+h1 {
+  font-weight: 500;
+}
+p {
+  font-weight: 300;
 }
 
 .navbar-brand img {
   width: 30px;
 }
+/* Se cambio un poco el tamaño de las imagenes del carrousel para que no fueran tan altas */
 .slide img {
   height: 100vh;
 }
-#quienesSomos i {
-  width: 100%;
-  text-align: center;
-  background: #2ca3ad;
-  font-size: 2em;
-}
-#quienesSomos p {
-  padding: 20px;
-}
-.card {
-  color: white;
-}
+
 .presentacion .card {
   background: black;
 }
@@ -35,11 +29,17 @@ body {
 .destacados {
   width: 100%;
 }
-.footer i {
+#presentacion i {
   font-size: 1.5em;
-  color: white;
-  padding: 5px;
 }
+#footer {
+  font-size: 2em;
+  color: white;
+}
+#footer a {
+  text-decoration: none;
+}
+
 @media (max-width: 576px) {
   .navbar {
     position: fixed;
