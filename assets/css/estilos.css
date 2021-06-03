@@ -4,6 +4,9 @@
 body {
   background: black;
 }
+.navbar {
+  width: 100%;
+}
 
 .navbar-brand img {
   width: 30px;
@@ -29,7 +32,13 @@ body {
 .destacados img {
   height: 200px;
 }
-.destacados .card {
+.destacados {
+  width: 100%;
+}
+.footer i {
+  font-size: 1.5em;
+  color: white;
+  padding: 5px;
 }
 @media (max-width: 576px) {
   .navbar {

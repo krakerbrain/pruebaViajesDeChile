@@ -44,16 +44,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio</a>
+            <a class="nav-link active" href="#heroSection">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Quienes Somos</a>
+            <a class="nav-link" href="#presentacion">Quienes Somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Destacados</a>
+            <a class="nav-link" href="#destacados">Destacados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="#contacto">Contacto</a>
           </li>
         </ul>
       </div>
@@ -82,8 +82,8 @@
       </div>
     </header>
 
-    <section id="presentación" class="presentacion pt-4 d-none d-sm-block">
-      <div class="container-fluid">
+    <section id="presentacion" class="presentacion pt-5 d-none d-sm-block">
+      <div class="container">
         <h1 class="text-center text-light">¿Quienes Somos?</h1>
         <hr class="bg-info my-4" />
 
@@ -128,13 +128,13 @@
       </div>
     </section>
 
-    <section class="destacados pt-5">
-      <div class="container-fluid">
-        <h1 class="text-center text-light">Destacados</h1>
-        <hr class="bg-info my-4" />
+    <div id="destacados" class="destacados pt-5">
+      <h1 class="text-center text-light">Destacados</h1>
+      <hr class="bg-info my-4" />
+      <div class="container">
         <div class="row">
-          <div class="col-sm-3">
-            <div class="card bg-info" style="width: 18rem">
+          <div class="col-12 col-sm-3">
+            <div class="card bg-info">
               <img src="assets\img\card1.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -142,8 +142,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="card bg-info" style="width: 18rem">
+          <div class="col-12 col-sm-3">
+            <div class="card bg-info">
               <img src="assets\img\card2.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -151,8 +151,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="card bg-info" style="width: 18rem">
+          <div class="col-12 col-sm-3">
+            <div class="card bg-info">
               <img src="assets\img\card3.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -160,8 +160,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="card bg-info" style="width: 18rem">
+          <div class="col-12 col-sm-3">
+            <div class="card bg-info">
               <img src="assets\img\card4.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -171,37 +171,63 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="container-fluid">
+    </div>
+
+    <section id="contacto" class="p-5">
       <h1 class="text-center text-light">Contacto</h1>
       <hr class="bg-info my-4" />
-
-      <div class="typeform-widget" data-url="https://form.typeform.com/to/Fr8NBMzT?typeform-medium=embed-snippet" style="width: 90%; height: 500px"></div>
-      <script>
-        (function () {
-          var qs,
-            js,
-            q,
-            s,
-            d = document,
-            gi = d.getElementById,
-            ce = d.createElement,
-            gt = d.getElementsByTagName,
-            id = "typef_orm",
-            b = "https://embed.typeform.com/";
-          if (!gi.call(d, id)) {
-            js = ce.call(d, "script");
-            js.id = id;
-            js.src = b + "embed.js";
-            q = gt.call(d, "script")[0];
-            q.parentNode.insertBefore(js, q);
-          }
-        })();
-      </script>
+      <div class="container">
+        <div class="typeform-widget" data-url="https://form.typeform.com/to/Fr8NBMzT?typeform-medium=embed-snippet" style="width: 100%; height: 500px"></div>
+        <script>
+          (function () {
+            var qs,
+              js,
+              q,
+              s,
+              d = document,
+              gi = d.getElementById,
+              ce = d.createElement,
+              gt = d.getElementsByTagName,
+              id = "typef_orm",
+              b = "https://embed.typeform.com/";
+            if (!gi.call(d, id)) {
+              js = ce.call(d, "script");
+              js.id = id;
+              js.src = b + "embed.js";
+              q = gt.call(d, "script")[0];
+              q.parentNode.insertBefore(js, q);
+            }
+          })();
+        </script>
+      </div>
     </section>
+    <footer class="footer pt-5">
+      <nav class="navbar navbar-expand-lg navbar-dark px-sm-5 bg-info fixed-bottom">
+        <div class="container">
+          <a class="navbar-brand mx-auto" href="#"> VIAJES CHILE </a>
 
-    <!--jQuery 3.5.1 sin slim-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <i class="fab fa-github-square"></i>
+              </li>
+              <li class="nav-item">
+                <i class="fab fa-linkedin"></i>
+              </li>
+              <li class="nav-item">
+                <i class="fab fa-twitter-square"></i>
+              </li>
+              <li class="nav-item">
+                <i class="fab fa-facebook-square"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+
+    <!--jQuery 3.3.1-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--Popper JS 1.16.1-->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
