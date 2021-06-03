@@ -41,11 +41,12 @@ p {
 }
 
 @media (max-width: 576px) {
-  .navbar {
-    position: fixed;
-    background: #2ca3ad;
-  }
   .slide img {
-    height: 60vh;
+    height: 50vh;
+  }
+
+  #footer .logo,
+  .redes {
+    text-align: center;
   }
 }
